@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.util.Random;
+
 public class first_choose extends AppCompatActivity {
 
     Button btnTarzan, btnSimple, btnUniversity, btnDance, btnClothes;
@@ -19,45 +21,39 @@ public class first_choose extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstchoose);
 
-
-
-
-
     }
 
-
-
-
-
-
-    public void onClick(View view) {
-        String filename = null;
-        switch (view.getId()) {
-            case R.id.btnClothes:
-                filename = new String();
-                filename = "madlibs3_clothes.txt";
-                break;
-            case R.id.btnDance:
-                filename = "madlibs4_dance.txt";
-                break;
-            case R.id.btnSimple:
-                filename = "madlibs0_simple.txt";
-                break;
-            case R.id.btnTarzan:
-                filename = "madlibs1_tarzan.txt";
-                break;
-            case R.id.btnUniversity:
-                filename = "madlibs2_university.txt";
-                break;
-            default:
-                break;
-        }
+    public void simple(View v){
         Intent intent = new Intent(this, InputActivity.class);
-        intent.putExtra("Story", filename);
+        intent.putExtra("filename","madlib0_simple.txt");
+        startActivity(intent);
+        finish();
+    }
+    public void tarzan(View v){
+        Intent intent = new Intent(this, InputActivity.class);
+        intent.putExtra("filename","madlib1_tarzan.txt");
+        startActivity(intent);
+        finish();
+    }
+    public void university(View v){
+        Intent intent = new Intent(this, InputActivity.class);
+        intent.putExtra("filename","madlib2_university.txt");
+        startActivity(intent);
+        finish();
+    }
+    public void clothes(View v){
+        Intent intent = new Intent(this, InputActivity.class);
+        intent.putExtra("filename","madlib3_clothes.txt");
+        startActivity(intent);
+        finish();
+    }
+    public void dance(View v){
+        Intent intent = new Intent(this, InputActivity.class);
+        intent.putExtra("filename","madlib4_dance.txt");
         startActivity(intent);
         finish();
     }
 
 
-
 }
+

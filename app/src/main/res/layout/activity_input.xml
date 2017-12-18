@@ -44,23 +44,23 @@
             android:inputType="textPersonName"
             android:hint=""
             android:ems="10"
-            android:id="@+id/placeholder"
+            android:id="@+id/inputText"
             android:layout_weight="0.7"/>
 
         <Button
-            android:text="Ok"
+            android:id="@+id/okButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/ok"
             android:layout_weight="0.3"
-            android:onClick="doThings" />
+            android:onClick="doThings"
+            android:text="Ok" />
     </LinearLayout>
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/type"
+        android:id="@+id/sort"
         android:gravity="center_horizontal"/>
 
 

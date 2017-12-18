@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bozana.madlibs.first_choose">
+    tools:context="com.example.bozana.madlibs.first_choose"
+    android:orientation="vertical">
 
 
     <TextView
@@ -17,7 +18,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 
-    <LinearLayout android:orientation="vertical">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
 
         <Button
@@ -25,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            android:onClick="simple"
             android:text="Simple" />
 
         <Button
@@ -33,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            android:onClick="dance"
             android:text="Dance" />
 
         <Button
@@ -41,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            android:onClick="clothes"
             android:text="Clothes" />
 
         <Button
@@ -49,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            android:onClick="tarzan"
             android:text="Tarzan" />
 
         <Button
@@ -57,8 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            android:onClick="university"
             android:text="University" />
     </LinearLayout>
 
-</LinearLayoutLayout>
+</LinearLayout>

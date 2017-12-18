@@ -24,7 +24,7 @@ public class showText extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // do something
+
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();

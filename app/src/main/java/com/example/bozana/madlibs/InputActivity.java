@@ -19,6 +19,8 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
+
+
         if (savedInstanceState != null) {
             stry = (Story) savedInstanceState.getSerializable("stry");
             // check mObjectA == mObjectA.getObjectBList().get(0).getParent();
@@ -36,17 +38,17 @@ public class InputActivity extends AppCompatActivity {
 
             stry = new Story(is);
         }
-        EditText test = (EditText) findViewById(R.id.placeholder);
+        EditText test = (EditText) findViewById(R.id.inputText);
         test.setHint(stry.getNextPlaceholder());
         TextView left = (TextView) findViewById(R.id.wordLeft);
         left.setText(stry.getPlaceholderRemainingCount() + " word(s) left");
-        TextView type = (TextView) findViewById(R.id.type);
+        TextView type = (TextView) findViewById(R.id.sort);
         type.setText("Please fill in a " + stry.getNextPlaceholder());
 
     }
 
     public void doThings(View view){
-        EditText placeholder = (EditText) findViewById(R.id.placeholder);
+        EditText placeholder = (EditText) findViewById(R.id.inputText);
         if (!placeholder.getText().toString().isEmpty()) {
             stry.fillInPlaceholder(placeholder.getText().toString());
             if (stry.isFilledIn() == true) {
@@ -56,12 +58,12 @@ public class InputActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                EditText test = (EditText) findViewById(R.id.placeholder);
+                EditText test = (EditText) findViewById(R.id.inputText);
                 test.setText("");
                 test.setHint(stry.getNextPlaceholder());
                 TextView left = (TextView) findViewById(R.id.wordLeft);
                 left.setText(stry.getPlaceholderRemainingCount() + " word(s) left");
-                TextView type = (TextView) findViewById(R.id.type);
+                TextView type = (TextView) findViewById(R.id.sort);
                 type.setText("Please fill in a " + stry.getNextPlaceholder());
             }
         }
@@ -70,7 +72,7 @@ public class InputActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
-        outState.putSerializable("stor", stry);
+        outState.putSerializable("stry", stry);
     }
 
 }
